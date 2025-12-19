@@ -33,12 +33,6 @@ if st.button('predict'):
     input_length = np.array([pressure,dewpoint,humidity,cloud,sunshine,winddirection,windspeed]).reshape(1,-1)
     if gnb.predict(input_length)==1:
         st.subheader('It is Raining')
-        img = Image.open('rain.jpg')
-        st.image(img,caption='Rain',use_container_width=True)
-
     else:
         st.subheader('Not Raining')
-        img = Image.open('norain.jpg')
-        st.image(img,caption='Not Raining',use_container_width=True)
-
 # %%
